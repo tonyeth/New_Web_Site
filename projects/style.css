@@ -31,31 +31,38 @@ body {
 }
 
 .menu-hidden {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 20px;
-    right: 20px;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    transition: all 0.5s ease;
-    z-index: 500;
+    display: flex;
+    position: relative; /* Posizionamento relativo al loro contenitore */
+    top: 0; /* Mantiene la posizione verticale standard */
+    left: 1200px; /* Distanza dall'icona del menù a hamburger, aggiusta secondo necessità */
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 0; /* Inizia da invisibile */
+    transform: translateY(-10px) translateX(0); /* Modifica per posizionare i link come desiderato */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1500; /* Alto indice per assicurare la sovraimpressione */
+    flex-direction: row; /* Elementi in linea orizzontale */
+    align-items: center; /* Centrati verticalmente nel loro contenitore */
+    padding-left: 10px; /* Spazio extra a sinistra per non attaccare troppo i link all'icona */
+    white-space: nowrap; /* Impedisce agli elementi di andare a capo */
 }
 
 .menu-hidden.visibile {
-    display: flex;
-    flex-direction: column;
+    opacity: 1; /* Diventa visibile */
+    transform: translateY(0); /* Torna alla posizione originale */
 }
 
+
 nav ul {
+    display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 10px;
+    margin: 0;
     text-align: center;
 }
 
 nav ul li {
-    margin: 10px 20%;
+    margin: 0 10px; /* Riduci lo spazio tra gli elementi del menù */
 }
 
 nav ul li a {
@@ -64,6 +71,7 @@ nav ul li a {
     font-weight: 600;
     transition: color 0.3s ease;
 }
+
 
 nav ul li a:hover {
     color: #cccccc;
@@ -87,64 +95,53 @@ nav ul li a:hover {
    
 }
 
-
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 4px solid #007bff;
-    margin-top: 10px;
-}
-
-.personal-info p {
-    margin: 5px 0;
+h1 {
     display: flex;
-    align-items: center;
-    font-size: 18px;
-}
+    justify-content: center; /* Centers the text horizontally */
+    font-weight: normal; /* Ensures the text is not bold */
+    margin-top: 100px; /* Sets the distance from the previous section */
+    font-family: Arial, Helvetica, sans-serif; color: #333;
+    
+    }
 
-.personal-info p .icon {
-    width: 24px;
-    margin-right: 10px;
-}
-
-.personal-info p:nth-child(2), .personal-info p:nth-child(3) {
-    font-size: 14px;
-}
-
-
-
-
-.social{
-    margin: 5px 0;
+    h2 {
     display: flex;
-    align-items: center;
-    font-size: 18px;
-   
-    
-    
-   
+    justify-content: center; /* Centers the text horizontally */
+    font-weight: normal; /* Ensures the text is not bold */
+    margin-top: 100px; /* Sets the distance from the previous section */
 }
 
-
-.ig{
-   
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    
-   
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px; /* Distanza dalla sezione precedente */
+    flex-wrap: wrap; /* Permette alle card di andare a capo su schermi piccoli */
 }
 
-.tiktok
-{
-    
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    
-   
+.card {
+    background-color: #ffffff; /* Sfondo bianco per le card */
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombra per dare profondità */
+    width: 20%; /* Larghezza delle card */
+    margin-bottom: 50px; /* Spazio tra le card e il contenuto sotto */
+    overflow: hidden; /* Nasconde parti dell'immagine che fuoriescono */
+}
+
+.card img {
+    width: 100%; /* Assicura che l'immagine copra la larghezza della card */
+    display: block; /* Rimuove spazi extra sotto l'immagine */
+    border-top-left-radius: 15px; /* Arrotonda gli angoli superiori dell'immagine */
+    border-top-right-radius: 15px;
+}
+
+.card p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Utilizza un font pulito e moderno */
+    font-size: 16px; /* Dimensione del testo appropriata */
+    line-height: 1.6; /* Interlinea per migliorare la leggibilità */
+    color: #333; /* Colore del testo scuro per contrasto, ma non troppo forte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Leggera ombreggiatura per profondità */
+    padding: 15px; /* Spazio intorno al testo all'interno della card */
+    margin: 0; /* Rimuove il margine di default del paragrafo */
 }
 
 .bio, .experience, .education {
@@ -199,3 +196,4 @@ p a[href^="mailto:"] {
 p a[href^="mailto:"]:hover {
     text-decoration: underline;
 }
+

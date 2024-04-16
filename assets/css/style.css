@@ -32,31 +32,38 @@ body {
 }
 
 .menu-hidden {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 20px;
-    right: 20px;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    transition: all 0.5s ease;
-    z-index: 500;
+    display: flex;
+    position: relative; /* Posizionamento relativo al loro contenitore */
+    top: 0; /* Mantiene la posizione verticale standard */
+    left: 1200px; /* Distanza dall'icona del menù a hamburger, aggiusta secondo necessità */
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 0; /* Inizia da invisibile */
+    transform: translateY(-10px) translateX(0); /* Modifica per posizionare i link come desiderato */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1500; /* Alto indice per assicurare la sovraimpressione */
+    flex-direction: row; /* Elementi in linea orizzontale */
+    align-items: center; /* Centrati verticalmente nel loro contenitore */
+    padding-left: 10px; /* Spazio extra a sinistra per non attaccare troppo i link all'icona */
+    white-space: nowrap; /* Impedisce agli elementi di andare a capo */
 }
 
 .menu-hidden.visibile {
-    display: flex;
-    flex-direction: column;
+    opacity: 1; /* Diventa visibile */
+    transform: translateY(0); /* Torna alla posizione originale */
 }
 
+
 nav ul {
+    display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 10px;
+    margin: 0;
     text-align: center;
 }
 
 nav ul li {
-    margin: 10px 20%;
+    margin: 0 10px; /* Riduci lo spazio tra gli elementi del menù */
 }
 
 nav ul li a {
