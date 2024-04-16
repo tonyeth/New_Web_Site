@@ -20,7 +20,7 @@ body {
     z-index: 1000;
 }
 
-.logo-scritta {
+.logo {
     height: 50px;
 }
 
@@ -30,7 +30,7 @@ body {
     color: #005a87;
 }
 
-.menu-nascosto {
+.menu-hidden {
     display: none;
     position: fixed;
     top: 60px;
@@ -42,7 +42,7 @@ body {
     z-index: 500;
 }
 
-.menu-nascosto.visibile {
+.menu-hidden.visibile {
     display: flex;
     flex-direction: column;
 }
