@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Seleziona il pulsante del menù a hamburger
     const hamburger = document.querySelector('.menu-hamburger');
     // Seleziona il menù a tendina
-    const menu = document.querySelector('.menu-nascosto');
+    const menu = document.querySelector('.menu-hidden');
 
     // Funzione per aprire/chiudere il menù
     function toggleMenu(event) {
