@@ -1,4 +1,7 @@
 body {
+    overflow-x: hidden;
+    margin: 0;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -7,6 +10,10 @@ body {
     padding: 20px;
 }
 
+
+
+
+
 .navbar {
     background-color: #fff;
     display: flex;
@@ -14,12 +21,13 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
+    position: fixed;  /* Chiave per mantenere la navbar fissa in alto */
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
 }
+
 
 .logo {
     height: 50px;
