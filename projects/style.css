@@ -1,4 +1,13 @@
 body {
+    overflow-x: hidden;
+    margin: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -105,11 +114,16 @@ h1 {
     }
 
     h2 {
-    display: flex;
-    justify-content: center; /* Centers the text horizontally */
-    font-weight: normal; /* Ensures the text is not bold */
-    margin-top: 100px; /* Sets the distance from the previous section */
-}
+        display: flex;
+        justify-content: center; /* Mantiene il testo centrato orizzontalmente */
+        font-weight: normal; /* Assicura che il testo non sia grassetto */
+        margin-top: 100px; /* Imposta la distanza dalla sezione precedente */
+        padding-left: 2000px; /* Aggiunge spazio interno a sinistra */
+        padding-right: 20px; /* Aggiunge spazio interno a destra */
+    }
+    
+    
+
 
 .cards-section {
     display: flex;
