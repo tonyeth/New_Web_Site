@@ -87,10 +87,7 @@ nav ul li a:hover {
         display: block;
     }
 
-    .menu-hidden {
-        position: fixed;
-        top: 50px;
-    }
+  
 }
 
 /* Il resto del CSS rimane invariato come da tua richiesta */
