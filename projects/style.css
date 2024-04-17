@@ -115,13 +115,20 @@ h1 {
     
     }
 
-    h2 {
+
+
+    h3 {
         display: flex;
         justify-content: center; /* Mantiene il testo centrato orizzontalmente */
-        font-weight: normal; /* Assicura che il testo non sia grassetto */
-        margin-top: 100px; /* Imposta la distanza dalla sezione precedente */
+        font-weight: bold; /* Assicura che il testo non sia grassetto */
         padding-left: 2000px; /* Aggiunge spazio interno a sinistra */
         padding-right: 20px; /* Aggiunge spazio interno a destra */
+        margin-top: 30px;
+    padding: 0;
+    color: #010101;
+    margin-bottom: 5px;
+
+    
     }
     
     
@@ -130,7 +137,7 @@ h1 {
 .cards-section {
     display: flex;
     justify-content: space-around;
-    margin-top: 100px; /* Distanza dalla sezione precedente */
+    margin-top: 50px; /* Distanza dalla sezione precedente */
     flex-wrap: wrap; /* Permette alle card di andare a capo su schermi piccoli */
 }
 
@@ -138,7 +145,7 @@ h1 {
     background-color: #ffffff; /* Sfondo bianco per le card */
     border-radius: 15px; /* Bordo arrotondato */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombra per dare profondità */
-    width: 20%; /* Larghezza delle card */
+    width: 40%; /* Larghezza delle card */
     margin-bottom: 50px; /* Spazio tra le card e il contenuto sotto */
     overflow: hidden; /* Nasconde parti dell'immagine che fuoriescono */
 }
@@ -160,42 +167,8 @@ h1 {
     margin: 0; /* Rimuove il margine di default del paragrafo */
 }
 
-.bio, .experience, .education {
-    background-color: #ffffff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-h2, h3, h5, p {
-    margin: 0;
-    padding: 0;
-}
 
-h3 {
-    color: #010204;
-    margin-bottom: 5px;
-}
-
-h5 {
-    color: #010204;
-    margin-top: 5px;
-    font-size: smaller;
-}
-
-li p {
-    margin-top: 15px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 20px;
-}
 
 footer {
     text-align: center;
