@@ -185,3 +185,34 @@ footer {
         margin-bottom: 20px;
     }
 }
+footer {
+    background-color: #005a87; /* Colore di sfondo del footer */
+    color: white; /* Colore del testo */
+    text-align: center; /* Allineamento del testo */
+    padding: 20px 0; /* Padding verticale */
+    position: relative; /* Posizione assoluta */
+    bottom: 0; /* Ancorato in fondo alla pagina */
+    left: 0; /* Estende da sinistra */
+    right: 0; /* Estende a destra */
+    width: 100%; /* Larghezza completa */
+}
+
+.footer-content p {
+    margin: 0 0 10px 0; /* Margini per distanziare il bottone dal testo */
+}
+
+footer button {
+    padding: 10px 20px; /* Padding interno del bottone */
+    background-color: #f8f8f8; /* Colore di sfondo del bottone */
+    color: #005a87; /* Colore del testo del bottone */
+    border: none; /* Nessun bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    cursor: pointer; /* Cambia il cursore in una mano quando si passa sopra */
+    font-size: 16px; /* Dimensione del testo */
+    transition: background-color 0.3s; /* Transizione per l'hover */
+}
+
+footer button:hover {
+    background-color: #cccccc; /* Colore di sfondo del bottone al passaggio del mouse */
+}
+

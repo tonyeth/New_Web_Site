@@ -205,52 +205,35 @@ li {
     margin-bottom: 20px;
 }
 
+
+
 footer {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    
+    background-color: #005a87; /* Colore di sfondo del footer */
+    color: white; /* Colore del testo */
+    text-align: center; /* Allineamento del testo */
+    padding: 20px 0; /* Padding verticale */
+    position: relative; /* Posizione assoluta */
+    bottom: 0; /* Ancorato in fondo alla pagina */
+    left: 0; /* Estende da sinistra */
+    right: 0; /* Estende a destra */
+    width: 100%; /* Larghezza completa */
 }
 
-
-
-
-
-.subscription-form {
-    background-color: #f0f0f0; /* Sfondo per distinguere il form */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+.footer-content p {
+    margin: 0 0 10px 0; /* Margini per distanziare il bottone dal testo */
 }
 
-.subscription-form h3 {
-    text-align: center;
-    color: #333;
+footer button {
+    padding: 10px 20px; /* Padding interno del bottone */
+    background-color: #f8f8f8; /* Colore di sfondo del bottone */
+    color: #005a87; /* Colore del testo del bottone */
+    border: none; /* Nessun bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    cursor: pointer; /* Cambia il cursore in una mano quando si passa sopra */
+    font-size: 16px; /* Dimensione del testo */
+    transition: background-color 0.3s; /* Transizione per l'hover */
 }
 
-.subscription-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+footer button:hover {
+    background-color: #cccccc; /* Colore di sfondo del bottone al passaggio del mouse */
 }
-
-.subscription-form input,
-.subscription-form button {
-    width: 80%; /* Larghezza degli elementi del form */
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.subscription-form button {
-    background-color: #005a87;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.subscription-form button:hover {
-    background-color: #003f66;
-}
-
