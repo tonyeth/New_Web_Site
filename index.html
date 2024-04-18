@@ -6,6 +6,22 @@
     <title>Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/icons/tonyeth.svg">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="assets/js/script.js"></script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ScyjE1eYaPsCYSzW2",
+      });
+   })();
+</script>
+</script>
 </head>
 <body>
     <header>
@@ -71,10 +87,15 @@
 
     
     <footer>
-        <div class="footer-content">
-            <p>© Do you need more information? </p>
-            <button onclick="window.location.href='mailto:antonio.quistelli2@gmail.com?subject=Need more information'">Click Here</button>
-        </div>
+        <form id="contact-form">
+            <input type="text" id ="Name" placeholder="Name" required />
+            <input type="text" id="Profession" placeholder="Profession" required />
+            <input type="text" Id="Industry" placeholder="Industry" required />
+            <input type="email" Id="email" placeholder="Email" required />
+            <textarea id="message" placeholder="message" required></textarea>
+            <button onclick="SendMail()" type="button">SUBMIT</button>
+
+        </form>
     </footer>
     
     <script src="assets/js/script.js"></script>

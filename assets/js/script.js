@@ -19,3 +19,21 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 });
+function SendMail() {
+    var params = {
+        from_name: document.getElementById("Name").value,
+        Email: document.getElementById("Email").value, // Assicurati che l'ID sia corretto e in minuscolo
+        Profession: document.getElementById("Profession").value,
+        Industry: document.getElementById("Industry").value,
+        Message: document.getElementById("message").value // Assicurati che l'ID sia corretto e in minuscolo
+    };
+
+    emailjs.send("service_dvn88zd", "template_lkolvrw", params)
+    .then(function(response) {
+        alert("Success!" + response.status);
+    }, function(error) {
+        alert("Failed to send email: " + error);
+    });
+}
+
+
