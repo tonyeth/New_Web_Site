@@ -1,11 +1,8 @@
 body {
     overflow-x: hidden;
-    
     margin: 0; /* Rimuove i margini di default */
-    padding: 0; /* Rimuove il padding di default se presente */
-    
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px; /* Adatto per tutti i dispositivi */
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -33,7 +30,7 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: #005a87;
-    display: block; /* Visible on all devices, hidden dynamically by JS if needed */
+    display: none; /* Visibile solo su piccoli schermi */
     position: relative;
     z-index: 1501;
 }
@@ -43,7 +40,7 @@ body {
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    position: fixed; /* Fixed to be visible during scroll */
+    position: fixed;
     top: 70px;
     left: 0;
     transform: translateY(-100%);
@@ -84,7 +81,6 @@ nav ul li a:hover {
     color: #cccccc;
 }
 
-
 .content-section, .cards-section {
     display: flex;
     justify-content: space-between;
@@ -93,48 +89,58 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.video-container {
-    flex: 0 0 35%;
-    margin-right: 20px;
+.background-image-section {
     position: relative;
-    padding-top: 25%;
-    margin-top: 100px;
-    margin-left: 20px;
+    text-align: center;
+    color: white;
 }
 
-.video-container video {
+.responsive-background {
+    width: 100%; /* assicura che l'immagine copra tutta la larghezza */
+    height: auto; /* mantiene l'aspect ratio dell'immagine */
     position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 6px 10px rgb(0, 0, 0);
+    top: 0;
+    z-index: -1; /* mantiene l'immagine sotto il testo e altri elementi */
 }
 
-.text-container {
-    flex: 1;
+.cta-container {
+    position:top; 
+    z-index: 10; /* assicura che il testo e i bottoni siano sopra l'immagine */
     padding: 20px;
-    text-align: left;
-    padding-top: 100px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5); /* Optional: sfondo semitrasparente per migliorare la leggibilità del testo */
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #005a87;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #003f5c;
 }
 
 .cards-section {
     display: flex;
     justify-content: space-around;
-    align-items: stretch; /* Modificato da center a stretch */
-    padding-top: 100px;
+    align-items: stretch;
+    padding-top: 50px;
     flex-wrap: wrap;
 }
-
 
 .card {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: 30%;
-    margin-bottom: 50px;
+    width: 30%; /* Fisso al 30% su desktop */
+    margin: 20px;
     overflow: hidden;
 }
 
@@ -156,104 +162,73 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #005a87;
-    color: #ffffff;
+    background-color: #6969fe;
+    color: white;
     text-align: center;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .menu-hamburger {
-        display: block; /* Mostra il menu hamburger su schermi piccoli */
-    }
-
-    .video-container {
-        flex: 1 0 100%;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio */
-        height: 0; /* This maintains aspect ratio */
-        margin-top: 20px;
-        position: relative; /* Assicura che il video sia posizionato correttamente */
-    }
-
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .card {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 20px;
-    }
-}
-footer {
-    background-color: #6969fe; /* Sfondo scuro per il footer */
-    color: white; /* Testo bianco per contrasto */
-    padding: 30px; /* Spazio intorno al contenuto del footer */
-    text-align: center; /* Allineamento del testo al centro */
-    position: relative; /* Fisso in fondo alla pagina */
+    padding: 20px;
+    position: relative;
     bottom: 0;
     left: 0;
-    margin-right: 50px;
     right: 0;
     width: 100%;
 }
 
 footer form {
     display: flex;
-    flex-direction: column; /* Imposta gli elementi del form in colonna */
-    align-items: center; /* Centra gli elementi */
-    margin-bottom: 20px; /* Spazio sotto il form */
+    flex-direction: column;
+    align-items: center; /* Assicura che tutti gli elementi del form siano centrati */
+    width: 100%; /* Assicura che il form occupi tutta la larghezza disponibile */
+    margin: 0 auto; /* Centra il form orizzontalmente */
 }
 
-footer input,
-footer textarea {
-    width: 90%; /* Larghezza degli input e textarea */
-    margin: 5px 0; /* Spazio verticale tra gli elementi */
-    padding: 10px; /* Padding interno per gli input */
-    border-radius: 5px; /* Bordi arrotondati */
-    border: none; /* Nessun bordo esterno */
-    font-size: 16px; /* Dimensione del testo */
+footer input, footer textarea {
+    width: 90%; /* Larghezza uniforme per tutti gli input */
+    margin: 5px 0; /* Margin uniforme per distanziare verticalmente gli elementi */
+    padding: 10px; /* Padding interno per una migliore leggibilità */
+    border-radius: 5px;
+    border: none; /* Rimuove il bordo per un aspetto più pulito */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer textarea {
-    height: 100px; /* Altezza specifica per textarea */
+    height: 100px; /* Specifica un'altezza per l'area del messaggio */
     resize: none; /* Impedisce il ridimensionamento manuale */
 }
 
 footer button {
     padding: 10px 20px;
-    background-color: white; /* Colore di sfondo del bottone */
-    color: #6969fe; /* Colore del testo */
-    border: none; /* Nessun bordo */
-    border-radius: 5px; /* Bordi arrotondati */
-    cursor: pointer; /* Stile del cursore */
-    font-size: 16px; /* Dimensione del testo */
-    transition: background-color 0.3s; /* Transizione per cambio colore */
-    margin-top: 10px; /* Margine sopra il bottone */
+    background-color: white;
+    color: #6969fe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.5s;
+    margin-top: 10px; /* Margine superiore per distanziare il bottone dagli input */
 }
 
 footer button:hover {
-    background-color: #004466; /* Cambia colore al passaggio del mouse */
+    background-color: #004466; /* Cambia colore al passaggio del mouse per una migliore interattività */
 }
 
-.footer-content p {
-    margin: 10px 0; /* Margine sopra e sotto il paragrafo */
-}
 
-.footer-content button {
-    background-color: #f8f8f8; /* Sfondo chiaro per altro bottone */
-    color: #333; /* Testo scuro */
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
-.footer-content button:hover {
-    background-color: #cccccc; /* Cambia colore al passaggio del mouse */
+    .menu-hamburger {
+        display: block;
+    }
+
+    .video-container, .text-container {
+        flex: 1 0 100%; /* Occupa l'intera larghezza su dispositivi mobili */
+        padding-top: 56.25%; /* Mantenimento del rapporto 16:9 */
+        margin-top: 10px;
+    }
+
+    .card {
+        width: 100%; /* Occupa l'intera larghezza su dispositivi mobili */
+    }
 }

@@ -2,26 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/icons/tonyeth.svg">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script src="assets/js/script.js"></script>
-
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "ScyjE1eYaPsCYSzW2",
-      });
-   })();
-</script>
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("ScyjE1eYaPsCYSzW2");
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -37,33 +28,23 @@
                 <li><a href="/projects">Projects</a></li>
             </ul>
         </nav>
-        <div class="main-title">
+        <div class="main-title">  
 
-            <nav>
-                <ul>
-                    <li><a href="/who_i_am">About me</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                </ul>
-            </nav>
+            <H1> </H1>
+        </div>
+
+           
            
             
         </div>
     </header>
-    
-    <section class="content-section">
-        <div class="video-container">
-            <video controls>
-                <source src="assets/video/video-header.mp4" type="video/mp4">
-               Your browser does not support the videoclip.
-            </video>
+    <section class="background-image-section">
+        <img src="assets/img/ethfront.png" alt="Background" class="responsive-background">
+        <div class="cta-container">
+            <h1>Welcome to Our Technology Hub!</h1>
+            <p>Explore the future of innovation with us.</p>
+            <button class="cta-button">Learn More</button>
         </div>
-
-        <div class="text-container"> 
-            <h2>The Future Is Here </h2>
-            <p>
-                Blockchain technology offers a myriad of advantages that revolutionize how data is stored, transactions are made, and trust is established. Firstly, it provides unparalleled security through its decentralized and immutable ledger, making data alteration nearly impossible. This enhances trust among parties, as records are transparent and verifiable by all. Moreover, blockchain enables faster and more cost-efficient transactions by eliminating intermediaries, making it ideal for financial services and beyond. Its ability to support smart contracts also automates and streamlines processes, further reducing costs and potential for errors. Lastly, blockchain's versatility extends to various sectors including supply chain management, healthcare, and voting systems, promising increased efficiency, transparency, and integrity in operations.</p>
-        </div>
-        
     </section>
 
     <section class="cards-section">
@@ -87,17 +68,19 @@
 
     
     <footer>
+        <H2> Would you like recive some news? Submit here!</H2>
         <form id="contact-form">
-            <input type="text" id ="Name" placeholder="Name" required />
-            <input type="text" id="Profession" placeholder="Profession" required />
-            <input type="text" Id="Industry" placeholder="Industry" required />
-            <input type="email" Id="email" placeholder="Email" required />
-            <textarea id="message" placeholder="message" required></textarea>
+            <input type="text" id="name" placeholder="name" required />
+<input type="text" id="profession" placeholder="profession" required />
+<input type="text" id="industry" placeholder="industry" required />
+<input type="email" id="email" placeholder="email" required />
+<textarea id="message" placeholder="message" required></textarea>
+
             <button onclick="SendMail()" type="button">SUBMIT</button>
 
         </form>
     </footer>
     
-    <script src="assets/js/script.js"></script>
+   
 </body>
 </html>

@@ -21,19 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function SendMail() {
     var params = {
-        from_name: document.getElementById("Name").value,
-        Email: document.getElementById("Email").value, // Assicurati che l'ID sia corretto e in minuscolo
-        Profession: document.getElementById("Profession").value,
-        Industry: document.getElementById("Industry").value,
-        Message: document.getElementById("message").value // Assicurati che l'ID sia corretto e in minuscolo
+        from_name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        profession: document.getElementById("profession").value,
+        industry: document.getElementById("industry").value,
+        message: document.getElementById("message").value
     };
 
     emailjs.send("service_dvn88zd", "template_lkolvrw", params)
     .then(function(response) {
-        alert("Success!" + response.status);
+        alert("Success! Email sent, status: " + response.status);
+        // Pulire il form dopo l'invio con successo
+        document.getElementById("contact-form").reset();
     }, function(error) {
-        alert("Failed to send email: " + error);
+        alert("Failed to send email: " + error.text);
     });
 }
-
-
