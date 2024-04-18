@@ -119,9 +119,11 @@ nav ul li a:hover {
 .cards-section {
     display: flex;
     justify-content: space-around;
-    margin-top: 100px;
+    align-items: stretch; /* Modificato da center a stretch */
+    padding-top: 100px;
     flex-wrap: wrap;
 }
+
 
 .card {
     background-color: #ffffff;
