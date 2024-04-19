@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -55,6 +55,63 @@ body {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+}body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+}
+
+.menu-hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    color: #005a87;
+    display: block; /* Visible on all devices, hidden dynamically by JS if needed */
+    position: relative;
+    z-index: 1501;
+}
+
+.menu-hidden {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: fixed; /* Fixed to be visible during scroll */
+    top: 59px;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1500;
+}
+
+.menu-hidden.visibile {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 nav ul {
@@ -75,11 +132,13 @@ nav ul li a {
     color: #333;
     font-weight: 600;
     transition: color 0.3s ease;
+    font-size: 80%
 }
 
 nav ul li a:hover {
     color: #cccccc;
 }
+
 
 
 @media (max-width: 768px) {
@@ -177,33 +236,53 @@ p {display: flex;
 
 
 footer {
-    background-color: #005a87; /* Colore di sfondo del footer */
-    color: white; /* Colore del testo */
-    text-align: center; /* Allineamento del testo */
-    padding: 20px 0; /* Padding verticale */
-    position: relative; /* Posizione assoluta */
-    bottom: 0; /* Ancorato in fondo alla pagina */
-    left: 0; /* Estende da sinistra */
-    right: 0; /* Estende a destra */
-    width: 100%; /* Larghezza completa */
+    background-color: #6969fe;
+    color: white;
+    text-align: center;
+   
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
-.footer-content p {
-    margin: 0 0 10px 0; /* Margini per distanziare il bottone dal testo */
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer input, footer textarea {
+    width: 90%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer textarea {
+    height: 100px;
+    resize: none;
 }
 
 footer button {
-    padding: 10px 20px; /* Padding interno del bottone */
-    background-color: #f8f8f8; /* Colore di sfondo del bottone */
-    color: #005a87; /* Colore del testo del bottone */
-    border: none; /* Nessun bordo */
-    border-radius: 5px; /* Angoli arrotondati */
-    cursor: pointer; /* Cambia il cursore in una mano quando si passa sopra */
-    font-size: 16px; /* Dimensione del testo */
-    transition: background-color 0.3s; /* Transizione per l'hover */
+    padding: 10px 20px;
+    background-color: white;
+    color: #6969fe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.5s;
+    margin-top: 10px;
 }
 
 footer button:hover {
-    background-color: #cccccc; /* Colore di sfondo del bottone al passaggio del mouse */
+    background-color: #004466;
 }
 

@@ -1,8 +1,8 @@
 body {
     overflow-x: hidden;
-    margin: 0; /* Rimuove i margini di default */
-    padding: 20px; /* Adatto per tutti i dispositivi */
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -30,7 +30,7 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: #005a87;
-    display: none; /* Visibile solo su piccoli schermi */
+    display: block; /* Visible on all devices, hidden dynamically by JS if needed */
     position: relative;
     z-index: 1501;
 }
@@ -40,8 +40,8 @@ body {
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    position: fixed;
-    top: 70px;
+    position: fixed; /* Fixed to be visible during scroll */
+    top: 59px;
     left: 0;
     transform: translateY(-100%);
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -75,17 +75,19 @@ nav ul li a {
     color: #333;
     font-weight: 600;
     transition: color 0.3s ease;
+    font-size: 80%
 }
 
 nav ul li a:hover {
     color: #cccccc;
 }
 
+
 .content-section, .cards-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 100px; /* Aumentato per compensare il padding del body rimosso */
     flex-wrap: wrap;
 }
 
@@ -93,23 +95,28 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     color: white;
+    width: 100vw; /* Assicura che la sezione sia larga quanto il viewport */
+    height: 100vh; /* Nuova aggiunta per coprire tutta l'altezza dello schermo */
+    overflow: hidden; /* Previeni overflow causato da margini/padding interni */
 }
 
 .responsive-background {
-    width: 100%; /* assicura che l'immagine copra tutta la larghezza */
-    height: auto; /* mantiene l'aspect ratio dell'immagine */
+    width: 100%; /* Assicura che l'immagine copra tutta la larghezza */
+    height: 100%; /* Modificato per coprire tutta l'altezza */
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1; /* mantiene l'immagine sotto il testo e altri elementi */
+    z-index: -1; /* Mantiene l'immagine sotto il testo e altri elementi */
+    object-fit: cover; /* Assicura che l'immagine copra tutto lo spazio senza distorcersi */
 }
 
 .cta-container {
-    position:top; 
-    z-index: 10; /* assicura che il testo e i bottoni siano sopra l'immagine */
-    padding: 20px;
+    position: relative; 
+    z-index: 10; /* Assicura che il testo e i bottoni siano sopra l'immagine */
+    padding: 30px;
     display: inline-block;
     background: rgba(0, 0, 0, 0.5); /* Optional: sfondo semitrasparente per migliorare la leggibilità del testo */
+    margin-top: 40px;
 }
 
 .cta-button {
@@ -165,7 +172,7 @@ footer {
     background-color: #6969fe;
     color: white;
     text-align: center;
-    padding: 20px;
+   
     position: relative;
     bottom: 0;
     left: 0;
@@ -176,24 +183,24 @@ footer {
 footer form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Assicura che tutti gli elementi del form siano centrati */
-    width: 100%; /* Assicura che il form occupi tutta la larghezza disponibile */
-    margin: 0 auto; /* Centra il form orizzontalmente */
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 footer input, footer textarea {
-    width: 90%; /* Larghezza uniforme per tutti gli input */
-    margin: 5px 0; /* Margin uniforme per distanziare verticalmente gli elementi */
-    padding: 10px; /* Padding interno per una migliore leggibilità */
+    width: 90%;
+    margin: 5px 0;
+    padding: 10px;
     border-radius: 5px;
-    border: none; /* Rimuove il bordo per un aspetto più pulito */
+    border: none;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 footer textarea {
-    height: 100px; /* Specifica un'altezza per l'area del messaggio */
-    resize: none; /* Impedisce il ridimensionamento manuale */
+    height: 100px;
+    resize: none;
 }
 
 footer button {
@@ -205,13 +212,12 @@ footer button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.5s;
-    margin-top: 10px; /* Margine superiore per distanziare il bottone dagli input */
+    margin-top: 10px;
 }
 
 footer button:hover {
-    background-color: #004466; /* Cambia colore al passaggio del mouse per una migliore interattività */
+    background-color: #004466;
 }
-
 
 @media (max-width: 768px) {
     body {
@@ -222,13 +228,7 @@ footer button:hover {
         display: block;
     }
 
-    .video-container, .text-container {
-        flex: 1 0 100%; /* Occupa l'intera larghezza su dispositivi mobili */
-        padding-top: 56.25%; /* Mantenimento del rapporto 16:9 */
-        margin-top: 10px;
-    }
-
     .card {
-        width: 100%; /* Occupa l'intera larghezza su dispositivi mobili */
+        width: 90%; /* Occupa l'intera larghezza su dispositivi mobili */
     }
 }

@@ -6,6 +6,13 @@
     <title>Who I'Am</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="../assets/icons/tonyeth.svg">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("ScyjE1eYaPsCYSzW2");
+        })();
+    </script>
 </head>
 <body>
 
@@ -50,10 +57,17 @@
    
 
     <footer>
-        <div class="footer-content">
-            <p>© Do you need more information? </p>
-            <button onclick="window.location.href='mailto:antonio.quistelli2@gmail.com?subject=Need more information'">Click Here</button>
-        </div>
+        <H2> Would you like recive some news? Submit here!</H2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="name" required />
+<input type="text" id="profession" placeholder="profession" required />
+<input type="text" id="industry" placeholder="industry" required />
+<input type="email" id="email" placeholder="email" required />
+<textarea id="message" placeholder="message" required></textarea>
+
+            <button onclick="SendMail()" type="button">SUBMIT</button>
+
+        </form>
     </footer>
     <script src="../assets/js/script.js"></script>
 </body>
