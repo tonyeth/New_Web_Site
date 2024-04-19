@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -144,17 +144,20 @@ nav ul li a:hover {
     align-items: center;
     font-size: 18px;
    
-    
-    
-   
 }
+@media (max-width: 768px) {
+    .social {
+        margin-top: 20px; /* Less space on smaller screens */
+    }
+}
+
 
 
 .ig{
    
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    object-fit: cover ;
     
    
 }
@@ -162,8 +165,8 @@ nav ul li a:hover {
 .tiktok
 {
     
-    width: 45px;
-    height: 45px;
+    width: 25px;
+    height: 25px;
     object-fit: cover;
     
    
@@ -209,7 +212,7 @@ li {
 
 
 footer {
-    background-color: #6969fe;
+    background: linear-gradient(45deg, #122b3d, #0e515d);
     color: white;
     text-align: center;
    
@@ -246,13 +249,14 @@ footer textarea {
 footer button {
     padding: 10px 20px;
     background-color: white;
-    color: #6969fe;
+    color: #004466;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.5s;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 footer button:hover {

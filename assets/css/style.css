@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
     margin: 0;
-    padding: 20px;
+    padding: 0; /* Rimuovi il padding per eliminare gli spazi bianchi esterni */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Mantieni il padding qui per la navbar */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
@@ -91,13 +91,16 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+/* Assicurati che l'immagine di sfondo copra esattamente l'area senza spazi aggiuntivi */
 .background-image-section {
     position: relative;
     text-align: center;
     color: white;
-    width: 100vw; /* Assicura che la sezione sia larga quanto il viewport */
-    height: 100vh; /* Nuova aggiunta per coprire tutta l'altezza dello schermo */
-    overflow: hidden; /* Previeni overflow causato da margini/padding interni */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0; /* Rimuovi padding */
+    margin: 0; /* Rimuovi margini */
 }
 
 .responsive-background {
@@ -117,7 +120,7 @@ h3 {
     text-transform: uppercase; /* Tutte lettere maiuscole per un look più dinamico */
     letter-spacing: 2px; /* Spaziatura tra le lettere per aumentare la leggibilità e stile */
     text-shadow: 3px 3px 0px rgba(0,0,0,0.2); /* Ombra leggera per un effetto 3D sottile */
-    padding: 20px 0; /* Padding per dare più spazio intorno al testo */
+    padding: 20px; /* Padding per dare più spazio intorno al testo */
     background: linear-gradient(45deg, #122b3d, #0e515d); /* Sfondo gradient per un look moderno */
     border-radius: 10px; /* Bordi arrotondati */
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Ombra esterna per un effetto sollevato */
@@ -154,40 +157,53 @@ h3 {
 
 .cards-section {
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    padding-top: 50px;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    margin: 0; /* Elimina margini esterni per le card */
+    padding: 20px 0; /* Solo padding verticale per mantenere lo spazio sopra e sotto */
+    box-sizing: border-box;  /* Include padding nel calcolo della width */
+    width: 100%; /* Usa l'intera larghezza disponibile */
 }
 
 .card {
     background-color: #ffffff;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: 30%; /* Fisso al 30% su desktop */
-    margin: 20px;
+    width: calc(33.333% - 20px); /* Adegua la larghezza per includere il padding/margin */
+    margin: 10px; /* Margini uniformi */
     overflow: hidden;
 }
 
 .card img {
-    width: 100%;
-    display: block;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    width: 100%; /* L'immagine copre la larghezza della card */
+    height: auto; /* Altezza automatica per mantenere il rapporto aspetto */
 }
 
 .card p {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 15px; /* Spazio interno per il testo */
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin: 0;
 }
 
+@media (max-width: 768px) {
+    .cards-section {
+        flex-direction: column; /* Imposta le card in colonna per dispositivi mobile */
+    }
+
+    .card {
+        width: 100%; /* Le card occupano tutta la larghezza dello schermo su dispositivi mobile */
+        margin: 10px 0; /* Solo margine verticale per evitare spazi laterali eccessivi */
+    }
+}
+
+
+
+
+
 footer {
-    background-color: #6969fe;
+    background: linear-gradient(45deg, #122b3d, #0e515d);
     color: white;
     text-align: center;
    
@@ -224,13 +240,14 @@ footer textarea {
 footer button {
     padding: 10px 20px;
     background-color: white;
-    color: #6969fe;
+    color: #004466;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.5s;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 footer button:hover {
