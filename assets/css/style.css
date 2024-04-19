@@ -109,6 +109,24 @@ nav ul li a:hover {
     z-index: -1; /* Mantiene l'immagine sotto il testo e altri elementi */
     object-fit: cover; /* Assicura che l'immagine copra tutto lo spazio senza distorcersi */
 }
+h3 {
+    font-family: 'Arial', sans-serif; /* Font moderno e pulito */
+    font-size: 30px; /* Dimensione grande per impatto visivo */
+    color: #3498db; /* Colore blu brillante */
+    text-align: center; /* Allineamento al centro */
+    text-transform: uppercase; /* Tutte lettere maiuscole per un look più dinamico */
+    letter-spacing: 2px; /* Spaziatura tra le lettere per aumentare la leggibilità e stile */
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.2); /* Ombra leggera per un effetto 3D sottile */
+    padding: 20px 0; /* Padding per dare più spazio intorno al testo */
+    background: linear-gradient(45deg, #122b3d, #0e515d); /* Sfondo gradient per un look moderno */
+    border-radius: 10px; /* Bordi arrotondati */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Ombra esterna per un effetto sollevato */
+    margin: 20px auto; /* Margini per centrare il titolo e dare spazio */
+    width: fit-content; /* La larghezza si adatta al contenuto */
+    max-width: 90%; /* Massima larghezza per garantire la responsività */
+    overflow: hidden; /* Nasconde qualsiasi contenuto che sporge */
+    margin-top: 50px;
+}
 
 .cta-container {
     position: relative; 
