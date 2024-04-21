@@ -30,7 +30,7 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: #005a87;
-    display: block; /* Visible on all devices, hidden dynamically by JS if needed */
+    display: block; 
     position: relative;
     z-index: 1501;
 }
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    position: fixed; /* Fixed to be visible during scroll */
+    position: fixed; 
     top: 59px;
     left: 0;
     transform: translateY(-100%);
@@ -91,21 +91,21 @@ nav ul li a:hover {
   
 }
 
-/* Il resto del CSS rimane invariato come da tua richiesta */
+
 .top-bar {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 20px;
     background-color: #ffffff; 
-    margin-top: 150px; /* Mantiene lo spazio superiore per spostarla più in basso */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per un effetto sollevato */
-    border-radius: 10px; /* Bordi arrotondati per un aspetto più morbido */
-    color: #333; /* Cambia il colore del testo in bianco per contrastare con lo sfondo */
-    width: calc(100% - 40px); /* Assicura che la barra si estenda mantenendo il padding della pagina */
-    position: relative; /* Posizionamento relativo per potenziali aggiustamenti */
-    left: 50%; /* Centra la barra */
-    transform: translateX(-50%); /* Ajustamento preciso del centro */
+    margin-top: 150px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    color: #333; 
+    width: calc(100% - 40px);
+    position: relative; 
+    left: 50%; 
+    transform: translateX(-50%); 
    
 }
 
@@ -147,7 +147,7 @@ nav ul li a:hover {
 }
 @media (max-width: 768px) {
     .social {
-        margin-top: 20px; /* Less space on smaller screens */
+        margin-top: 20px; 
     }
 }
 

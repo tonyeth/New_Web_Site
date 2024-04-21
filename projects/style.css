@@ -30,7 +30,7 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: #005a87;
-    display: block; /* Visible on all devices, hidden dynamically by JS if needed */
+    display: block; 
     position: relative;
     z-index: 1501;
 }
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    position: fixed; /* Fixed to be visible during scroll */
+    position: fixed; 
     top: 70px;
     left: 0;
     transform: translateY(-100%);
@@ -87,7 +87,7 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: #005a87;
-    display: block; /* Visible on all devices, hidden dynamically by JS if needed */
+    display: block; 
     position: relative;
     z-index: 1501;
 }
@@ -97,7 +97,7 @@ body {
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    position: fixed; /* Fixed to be visible during scroll */
+    position: fixed; 
     top: 59px;
     left: 0;
     transform: translateY(-100%);
@@ -153,30 +153,30 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-around;
     padding: 20px;
-    background-color: #ffffff; /* Cambia il colore di sfondo in un blu più vivace */
-    margin-top: 150px; /* Mantiene lo spazio superiore per spostarla più in basso */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per un effetto sollevato */
-    border-radius: 10px; /* Bordi arrotondati per un aspetto più morbido */
-    color: #333; /* Cambia il colore del testo in bianco per contrastare con lo sfondo */
-    width: calc(100% - 40px); /* Assicura che la barra si estenda mantenendo il padding della pagina */
-    position: relative; /* Posizionamento relativo per potenziali aggiustamenti */
-    left: 50%; /* Centra la barra */
-    transform: translateX(-50%); /* Ajustamento preciso del centro */
+    background-color: #ffffff; 
+    margin-top: 150px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    color: #333; 
+    width: calc(100% - 40px); 
+    position: relative; 
+    left: 50%; 
+    transform: translateX(-50%); 
    
 }
 
 h1 {
     display: flex;
-    justify-content: center; /* Centers the text horizontally */
-    font-weight: normal; /* Ensures the text is not bold */
-    margin-top: 100px; /* Sets the distance from the previous section */
+    justify-content: center; 
+    font-weight: normal; 
+    margin-top: 100px; 
     font-family: Arial, Helvetica, sans-serif; color: #333;
     
     }
 p {display: flex;
-    justify-content: center; /* Centers the text horizontally */
-    font-weight: normal; /* Ensures the text is not bold */
-    margin-top: 10px; /* Sets the distance from the previous section */
+    justify-content: center; 
+    font-weight: normal; 
+    margin-top: 10px; 
     margin-left: 60px;
     margin-right: 60px;
     font-family: Arial, Helvetica, sans-serif; color: #333;}
@@ -184,10 +184,10 @@ p {display: flex;
 
     h3 {
         display: flex;
-        justify-content: center; /* Mantiene il testo centrato orizzontalmente */
-        font-weight: bold; /* Assicura che il testo non sia grassetto */
-        padding-left: 2000px; /* Aggiunge spazio interno a sinistra */
-        padding-right: 20px; /* Aggiunge spazio interno a destra */
+        justify-content: center; 
+        font-weight: bold; 
+        padding-left: 2000px; 
+        padding-right: 20px; 
         margin-top: 30px;
     padding: 0;
     color: #010101;
@@ -201,29 +201,29 @@ p {display: flex;
 
     .cards-section {
         display: flex;
-        justify-content: space-between; /* Distanzia uniformemente le card su desktop */
-        align-items: flex-start; /* Allinea le card in alto per un look uniforme */
-        flex-wrap: wrap; /* Permette alle card di andare a capo automaticamente */
-        padding: 20px; /* Aggiunge un po' di spazio intorno alla sezione per evitare che le card tocchino i bordi */
-        box-sizing: border-box; /* Include il padding e il border nel calcolo della width */
+        justify-content: space-between; 
+        align-items: flex-start; 
+        flex-wrap: wrap; 
+        padding: 20px; 
+        box-sizing: border-box; 
     }
     
     .card {
         background-color: #ffffff;
-        border-radius: 10px; /* Bordi arrotondati per un aspetto moderno */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombra sotto la card per effetto profondità */
-        margin: 10px; /* Margini intorno alle card per spazio */
-        overflow: hidden; /* Nasconde il contenuto che fuoriesce */
-        width: calc(50% - 20px); /* Larghezza delle card su desktop, calcolata per inserire 3 card per fila */
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        margin: 10px; 
+        overflow: hidden; 
+        width: calc(50% - 20px);
     }
     
     .card img {
-        width: 100%; /* L'immagine copre la larghezza della card */
-        height: auto; /* Altezza automatica per mantenere il rapporto aspetto */
+        width: 100%; 
+        height: auto; 
     }
     
     .card p {
-        padding: 15px; /* Spazio interno per il testo */
+        padding: 15px; 
         font-size: 16px;
         line-height: 1.6;
         color: #333;
@@ -231,12 +231,12 @@ p {display: flex;
     
     @media (max-width: 768px) {
         .cards-section {
-            flex-direction: column; /* Imposta le card in colonna per dispositivi mobile */
+            flex-direction: column; 
         }
     
         .card {
-            width: 100%; /* Le card occupano tutta la larghezza dello schermo su dispositivi mobile */
-            margin: 0px 0; /* Solo margine verticale per evitare spazi laterali eccessivi */
+            width: 100%; 
+            margin: 0px 0; 
         }
     }
     
