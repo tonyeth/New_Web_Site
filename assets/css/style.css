@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
     margin: 0;
-    padding: 0; /* Rimuovi il padding per eliminare gli spazi bianchi esterni */
+    padding: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px; /* Mantieni il padding qui per la navbar */
+    padding: 10px 20px; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
@@ -30,7 +30,7 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: #005a87;
-    display: block; /* Visible on all devices, hidden dynamically by JS if needed */
+    display: block; 
     position: relative;
     z-index: 1501;
 }
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    position: fixed; /* Fixed to be visible during scroll */
+    position: fixed; 
     top: 59px;
     left: 0;
     transform: translateY(-100%);
@@ -87,11 +87,11 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 100px; /* Aumentato per compensare il padding del body rimosso */
+    padding-top: 100px; 
     flex-wrap: wrap;
 }
 
-/* Assicurati che l'immagine di sfondo copra esattamente l'area senza spazi aggiuntivi */
+
 .background-image-section {
     position: relative;
     text-align: center;
@@ -99,44 +99,44 @@ nav ul li a:hover {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    padding: 0; /* Rimuovi padding */
-    margin: 0; /* Rimuovi margini */
+    padding: 0; 
+    margin: 0; 
 }
 
 .responsive-background {
-    width: 100%; /* Assicura che l'immagine copra tutta la larghezza */
-    height: 100%; /* Modificato per coprire tutta l'altezza */
+    width: 100%; 
+    height: 100%; 
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1; /* Mantiene l'immagine sotto il testo e altri elementi */
-    object-fit: cover; /* Assicura che l'immagine copra tutto lo spazio senza distorcersi */
+    z-index: -1; 
+    object-fit: cover; 
 }
 h3 {
-    font-family: 'Arial', sans-serif; /* Font moderno e pulito */
-    font-size: 30px; /* Dimensione grande per impatto visivo */
-    color: #3498db; /* Colore blu brillante */
-    text-align: center; /* Allineamento al centro */
-    text-transform: uppercase; /* Tutte lettere maiuscole per un look più dinamico */
-    letter-spacing: 2px; /* Spaziatura tra le lettere per aumentare la leggibilità e stile */
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.2); /* Ombra leggera per un effetto 3D sottile */
-    padding: 20px; /* Padding per dare più spazio intorno al testo */
-    background: linear-gradient(45deg, #122b3d, #0e515d); /* Sfondo gradient per un look moderno */
-    border-radius: 10px; /* Bordi arrotondati */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Ombra esterna per un effetto sollevato */
-    margin: 20px auto; /* Margini per centrare il titolo e dare spazio */
-    width: fit-content; /* La larghezza si adatta al contenuto */
-    max-width: 90%; /* Massima larghezza per garantire la responsività */
-    overflow: hidden; /* Nasconde qualsiasi contenuto che sporge */
+    font-family: 'Arial', sans-serif; 
+    font-size: 30px; 
+    color: #3498db; 
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.2); 
+    padding: 20px;
+    background: linear-gradient(45deg, #122b3d, #0e515d); 
+    border-radius: 10px; 
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
+    margin: 20px auto; 
+    width: fit-content; 
+    max-width: 90%; 
+    overflow: hidden; 
     margin-top: 50px;
 }
 
 .cta-container {
     position: relative; 
-    z-index: 10; /* Assicura che il testo e i bottoni siano sopra l'immagine */
+    z-index: 10; 
     padding: 30px;
     display: inline-block;
-    background: rgba(0, 0, 0, 0.5); /* Optional: sfondo semitrasparente per migliorare la leggibilità del testo */
+    background: rgba(0, 0, 0, 0.5); 
     margin-top: 40px;
 }
 
@@ -160,28 +160,28 @@ h3 {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0; /* Elimina margini esterni per le card */
-    padding: 20px 0; /* Solo padding verticale per mantenere lo spazio sopra e sotto */
-    box-sizing: border-box;  /* Include padding nel calcolo della width */
-    width: 100%; /* Usa l'intera larghezza disponibile */
+    margin: 0;
+    padding: 20px 0;
+    box-sizing: border-box;  
+    width: 100%; 
 }
 
 .card {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: calc(33.333% - 20px); /* Adegua la larghezza per includere il padding/margin */
-    margin: 10px; /* Margini uniformi */
+    width: calc(33.333% - 20px); 
+    margin: 10px;
     overflow: hidden;
 }
 
 .card img {
-    width: 100%; /* L'immagine copre la larghezza della card */
-    height: auto; /* Altezza automatica per mantenere il rapporto aspetto */
+    width: 100%; 
+    height: auto;
 }
 
 .card p {
-    padding: 15px; /* Spazio interno per il testo */
+    padding: 15px; 
     font-size: 16px;
     line-height: 1.6;
     color: #333;
@@ -189,12 +189,12 @@ h3 {
 
 @media (max-width: 768px) {
     .cards-section {
-        flex-direction: column; /* Imposta le card in colonna per dispositivi mobile */
+        flex-direction: column; 
     }
 
     .card {
-        width: 100%; /* Le card occupano tutta la larghezza dello schermo su dispositivi mobile */
-        margin: 10px 0; /* Solo margine verticale per evitare spazi laterali eccessivi */
+        width: 100%; 
+        margin: 10px 0; 
     }
 }
 
@@ -264,6 +264,6 @@ footer button:hover {
     }
 
     .card {
-        width: 90%; /* Occupa l'intera larghezza su dispositivi mobili */
+        width: 90%; 
     }
 }
