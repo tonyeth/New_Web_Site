@@ -236,7 +236,7 @@ p {display: flex;
     
         .card {
             width: 100%; /* Le card occupano tutta la larghezza dello schermo su dispositivi mobile */
-            margin: 10px 0; /* Solo margine verticale per evitare spazi laterali eccessivi */
+            margin: 0px 0; /* Solo margine verticale per evitare spazi laterali eccessivi */
         }
     }
     
